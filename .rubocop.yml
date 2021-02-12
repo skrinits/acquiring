@@ -1,0 +1,36 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 2.7.2
+  DisplayCopNames: true
+  NewCops: enable
+  Exclude:
+    - lib/tasks/cucumber.rake
+    - node_modules/**/*
+    - bin/bundle
+
+Style/Documentation:
+  Enabled: false
+
+Rails/FilePath:
+  Enabled: false
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    default: []
+    '%i': '[]'
+    '%I': '[]'
+    '%r': '{}'
+    '%w': '[]'
+    '%W': '[]'
+
+RSpec/ContextWording:
+  Prefixes:
+    - when
+    - with
+    - without
+    - if
+    - unless
+    - for
