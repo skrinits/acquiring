@@ -10,6 +10,11 @@ AllCops:
     - lib/tasks/cucumber.rake
     - node_modules/**/*
     - bin/bundle
+    - db/schema.rb
+    - config/initializers/*
+    - config/environments/**/*
+    - spec/factories/*
+    - db/**/*
 
 Style/Documentation:
   Enabled: false

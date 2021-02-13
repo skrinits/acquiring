@@ -29,6 +29,10 @@ gem 'interactor', '~> 3.0'
 gem 'whenever', require: false
 # authorization
 gem 'devise'
+# validation of emails
+gem 'email_address'
+# validation uuid
+gem 'uuid'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -64,6 +68,13 @@ group :test do
   gem 'rspec-rails', '~> 4.0.2'
   # test data
   gem 'factory_bot_rails'
+  # fake test data
+  gem 'ffaker'
+  # check a convering percent
+  gem 'simplecov', require: false
+  gem 'simplecov-console', require: false
+  # validations of model
+  gem 'shoulda-matchers'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

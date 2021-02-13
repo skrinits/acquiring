@@ -1,5 +1,14 @@
 # frozen_string_literal: true
 
+if ENV['COVERAGE'] == 'true'
+  require 'simplecov'
+  require 'simplecov-console'
+
+  SimpleCov.formatter = SimpleCov::Formatter::Console
+  SimpleCov.start :rails
+  SimpleCov.minimum_coverage 80
+end
+
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'

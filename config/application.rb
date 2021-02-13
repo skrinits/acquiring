@@ -12,12 +12,12 @@ module Acquiring
   class Application < Rails::Application
     config.load_defaults 6.1
 
-    config.generators do |g|
-      g.template_engine :slim
-      g.test_framework :rspec, fixture: false, view: false
-      g.fixture_replacement :factory_bot, dir: 'spec/factories'
-      g.view_specs      false
-      g.helper_specs    false
+    config.generators do |generator|
+      generator.template_engine :slim
+      generator.test_framework :rspec, fixture: false, view: false
+      generator.fixture_replacement :factory_bot, dir: 'spec/factories'
+      generator.view_specs      false
+      generator.helper_specs    false
     end
   end
 end
