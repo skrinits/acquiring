@@ -10,5 +10,5 @@ class Merchant < ApplicationRecord
   # additional checks of email format
   validates_with EmailAddress::ActiveRecordValidator
 
-  has_many :transactions, class_name: 'Transaction::Base'
+  has_many :transactions, class_name: 'Transaction::Base', dependent: :destroy
 end

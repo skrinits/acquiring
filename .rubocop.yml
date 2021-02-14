@@ -39,3 +39,16 @@ RSpec/ContextWording:
     - if
     - unless
     - for
+
+RSpec/DescribeClass:
+  Exclude:
+    - spec/tasks/**/*
+
+RSpec/MultipleExpectations:
+  Max: 5
+
+RSpec/MultipleMemoizedHelpers:
+  Max: 10
+
+Rails/SkipsModelValidations:
+  Enabled: false
