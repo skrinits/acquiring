@@ -39,6 +39,7 @@ RSpec/ContextWording:
     - if
     - unless
     - for
+    - and
 
 RSpec/DescribeClass:
   Exclude:
@@ -52,3 +53,13 @@ RSpec/MultipleMemoizedHelpers:
 
 Rails/SkipsModelValidations:
   Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+
+RSpec/NestedGroups:
+  Max: 4
+
+Metrics/AbcSize:
+  Max: 20

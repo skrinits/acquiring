@@ -7,7 +7,6 @@ FactoryBot.define do
     customer_email { "#{FFaker::Lorem.characters[0..10]}@gmail.com" }
     uuid { Digest::UUID.uuid_v4 }
     customer_phone { FFaker::PhoneNumber.phone_number }
-    merchant
 
     trait :approved do
       status { :approved }
@@ -26,19 +25,16 @@ FactoryBot.define do
     end
 
     factory :transaction_authorization, class: 'Transaction::Authorization' do
-      type { 'Transaction::Authorization' }
+      merchant
     end
 
     factory :transaction_charge, class: 'Transaction::Charge' do
-      type { 'Transaction::Charge' }
     end
 
     factory :transaction_refund, class: 'Transaction::Refund' do
-      type { 'Transaction::Refund' }
     end
 
     factory :transaction_reverse, class: 'Transaction::Reverse' do
-      type { 'Transaction::Reverse' }
     end
   end
 end

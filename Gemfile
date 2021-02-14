@@ -75,6 +75,8 @@ group :test do
   gem 'simplecov-console', require: false
   # validations of model
   gem 'shoulda-matchers'
+  # check json
+  gem 'rspec-json_expectations'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -16,3 +16,8 @@
 
 # Installation background deleting old transactions
 `whenever -i -s 'environment=your_environment'`
+
+# Accepting payments using XML/ JSON API
+1. send a post request to /api/v1/transactions with basic authentication
+2. basic authentication creditials for develop environment: name=name password=password
+3. format requests in /spec/fixtures/files

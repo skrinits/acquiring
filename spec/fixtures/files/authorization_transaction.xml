@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transaction>
+  <type>authorization</type>
+  <customer_email>test@mail.ru</customer_email>
+  <customer_phone>+7(911)111-11-11</customer_phone>
+  <amount>1000</amount>
+  <merchant_id>1</merchant_id>
+</transaction>

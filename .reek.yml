@@ -1,8 +1,15 @@
 exclude_paths:
   - db/**/*
+  - spec/support/auth_helper.rb
 
 detectors:
   IrresponsibleModule:
+    enabled: false
+
+  UtilityFunction:
+    enabled: false
+
+  FeatureEnvy:
     enabled: false
 
   UtilityFunction:
