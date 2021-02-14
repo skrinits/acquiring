@@ -13,3 +13,6 @@
 2. the header order: name;email;description;status;password
 3. the column separator is a semicolomn
 4. `rake import_records:merchants[path_to_file]`
+
+# Installation background deleting old transactions
+`whenever -i -s 'environment=your_environment'`
