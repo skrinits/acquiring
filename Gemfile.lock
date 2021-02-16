@@ -124,6 +124,12 @@ GEM
       cucumber-core (~> 8.0, >= 8.0.1)
       cucumber-cucumber-expressions (~> 10.3, >= 10.3.0)
       cucumber-messages (~> 13.0, >= 13.0.1)
+    database_cleaner (2.0.1)
+      database_cleaner-active_record (~> 2.0.0)
+    database_cleaner-active_record (2.0.0)
+      activerecord (>= 5.a)
+      database_cleaner-core (~> 2.0.0)
+    database_cleaner-core (2.0.1)
     devise (4.7.3)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -153,6 +159,18 @@ GEM
     interactor (3.1.2)
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
+    kaminari (1.2.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.1)
+      kaminari-activerecord (= 1.2.1)
+      kaminari-core (= 1.2.1)
+    kaminari-actionview (1.2.1)
+      actionview
+      kaminari-core (= 1.2.1)
+    kaminari-activerecord (1.2.1)
+      activerecord
+      kaminari-core (= 1.2.1)
+    kaminari-core (1.2.1)
     kwalify (0.7.2)
     linters (1.0.3)
       rake
@@ -162,8 +180,6 @@ GEM
     loofah (2.9.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
-    macaddr (1.7.2)
-      systemu (~> 2.6.5)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     marcel (0.3.3)
@@ -329,7 +345,6 @@ GEM
       sprockets (>= 3.0.0)
     sys-uname (1.2.2)
       ffi (~> 1.1)
-    systemu (2.6.5)
     temple (0.8.2)
     terminal-table (1.6.0)
     thor (1.1.0)
@@ -344,8 +359,6 @@ GEM
       unf_ext
     unf_ext (0.0.7.7)
     unicode-display_width (2.0.0)
-    uuid (2.3.9)
-      macaddr (~> 1.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.1.0)
@@ -380,6 +393,7 @@ DEPENDENCIES
   bundler-audit
   byebug
   cucumber-rails
+  database_cleaner
   devise
   email_address
   factory_bot_rails
@@ -387,6 +401,7 @@ DEPENDENCIES
   ffaker
   interactor (~> 3.0)
   jbuilder (~> 2.7)
+  kaminari
   linters
   listen (~> 3.3)
   pg (~> 1.1)
@@ -408,7 +423,6 @@ DEPENDENCIES
   spring
   turbolinks (~> 5)
   tzinfo-data
-  uuid
   web-console (>= 4.1.0)
   webdrivers
   webpacker (~> 5.0)

@@ -4,4 +4,4 @@ ul.nav.nav-pills.mb-3.mt-3
   li.nav-item
     = link_to 'Merchants', '#', class: "nav-link #{ 'active' if controller_name == 'merchants' }"
   li.nav-item
-    = link_to 'Transactions', '#', class: "nav-link #{ 'active' if controller_name == 'transactions' }"
+    = link_to 'Transactions', transactions_path, class: "nav-link #{ 'active' if controller_name == 'transactions' }"

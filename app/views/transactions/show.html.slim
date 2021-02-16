@@ -1,0 +1,18 @@
+h1 Information about the transaction
+
+table.table.table-bordered
+  tr
+    th UUID
+    td = @transaction.uuid
+  tr
+    th Type
+    td = @transaction.type
+  tr
+    th Status
+    td = @transaction.status
+  tr
+    th Creation date
+    td = @transaction.created_at
+  tr
+    th History
+    td = @transaction.history

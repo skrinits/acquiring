@@ -3,7 +3,7 @@
 FactoryBot.define do
   factory :transaction do
     status { 'approved' }
-    amount { 1_000 }
+    amount { rand(100..1_000) }
     customer_email { "#{FFaker::Lorem.characters[0..10]}@gmail.com" }
     uuid { Digest::UUID.uuid_v4 }
     customer_phone { FFaker::PhoneNumber.phone_number }

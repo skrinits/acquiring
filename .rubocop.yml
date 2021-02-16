@@ -63,3 +63,8 @@ RSpec/NestedGroups:
 
 Metrics/AbcSize:
   Max: 20
+
+Style/MixinUsage:
+  Exclude:
+    - features/support/devise.rb
+    - features/support/env.rb

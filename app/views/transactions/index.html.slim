@@ -1,0 +1,14 @@
+table.table.table-striped
+  thead
+    tr
+      th UUID
+      th Type
+      th Status
+  tbody
+    - @transactions.each do |transaction|
+      tr
+        td = link_to transaction.uuid, transaction_path(transaction.id)
+        td = transaction.type
+        td = transaction.status
+
+= paginate @transactions
