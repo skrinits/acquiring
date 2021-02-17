@@ -10,6 +10,10 @@ Bundler.require(*Rails.groups)
 
 module Acquiring
   class Application < Rails::Application
+    config.eager_load_paths += %w[/].map { |path| "#{config.root}/lib#{path}" }
+    # Use the responders controller from the responders gem
+    config.app_generators.scaffold_controller :responders_controller
+
     config.load_defaults 6.1
 
     config.generators do |generator|

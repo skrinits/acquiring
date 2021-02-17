@@ -1,0 +1,12 @@
+h1 Merchant customization
+
+= semantic_form_for @customization, url: merchant_customizations_path(id: params[:id]) do |form_builder|
+  = form_builder.inputs :merchant_customization_details do
+    = form_builder.input :name, input_html: { value: @merchant.name }
+    = form_builder.input :status, as: :select, collection: @merchant.class.statuses.keys, selected: @merchant.status
+    = form_builder.input :description, input_html: { value: @merchant.description }
+    = form_builder.input :email, input_html: { value: @merchant.email }
+
+  = form_builder.actions do
+    = form_builder.action :submit, label: 'Update', button_html: { class: 'btn btn-primary' }
+    = form_builder.action :cancel, label: 'Cancel', button_html: { class: 'btn btn-danger' }

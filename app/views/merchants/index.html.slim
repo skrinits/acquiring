@@ -1,0 +1,14 @@
+table.table.table-striped
+  thead
+    tr
+      th Name
+      th Email
+      th Status
+  tbody
+    - @merchants.each do |merchant|
+      tr
+        td = link_to merchant.name, merchant_path(merchant.id)
+        td = merchant.email
+        td = merchant.status
+
+= paginate @merchants

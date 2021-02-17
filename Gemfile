@@ -33,6 +33,10 @@ gem 'devise'
 gem 'email_address'
 # pagination
 gem 'kaminari'
+# respond to requests
+gem 'responders'
+# form builder
+gem 'formtastic'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -77,6 +81,7 @@ group :test do
   # validations of model
   gem 'shoulda-matchers'
   # check json
+  gem 'rails-controller-testing'
   gem 'rspec-json_expectations'
 end
 

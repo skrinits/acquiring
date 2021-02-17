@@ -9,6 +9,16 @@ FactoryBot.define do
     password_confirmation { 'password' }
     status { 'active' }
 
+    trait :with_transaction do
+      transient do
+        type { :authorization }
+      end
+
+      after :create do |merchant, evaluator|
+        merchant.transactions << create("transaction_#{ evaluator.type }")
+      end
+    end
+
     trait :active do
       status { :active }
     end

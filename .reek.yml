@@ -2,6 +2,14 @@ exclude_paths:
   - db/**/*
   - spec/support/auth_helper.rb
 
+directories:
+  'app/controllers':
+    InstanceVariableAssumption:
+      enabled: false
+  'app/forms':
+    Attribute:
+      enabled: false
+
 detectors:
   IrresponsibleModule:
     enabled: false

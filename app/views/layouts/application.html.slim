@@ -12,4 +12,7 @@ html
     .container
       - if admin_signed_in?
         = render 'shared/header'
+      .row.justify-content-center
+        - flash.each do |type, message|
+          .alert.text-center.col-6 class=(type == 'notice' ? 'alert-success' : 'alert-danger') = message
       = yield

@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# would be placed in admin folder
 class TransactionsController < ApplicationController
   include Collectionable
 

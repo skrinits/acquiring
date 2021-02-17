@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   devise_for :admins
 
   resources :transactions, only: %i[index show]
+  resources :merchants, only: %i[index show destroy]
+  resources :merchant_customizations, only: %i[new create]
 
   namespace :api do
     namespace :v1 do

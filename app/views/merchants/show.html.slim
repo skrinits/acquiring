@@ -1,0 +1,18 @@
+h1 Information about the merchant
+
+table.table.table-bordered
+  tr
+    th Name
+    td = @merchant.name
+  tr
+    th Type
+    td = @merchant.email
+  tr
+    th Status
+    td = @merchant.status
+  tr
+    th Total transaction sum
+    td = @merchant.total_transaction_sum
+
+= link_to 'Edit', new_merchant_customization_path(id: @merchant), class: 'btn btn-outline-dark me-2'
+= link_to 'Destroy', merchant_path(@merchant), method: :delete, class: 'btn btn-outline-danger'
